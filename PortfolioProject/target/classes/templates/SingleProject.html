@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Project</title>
+	<link th:href="@{/styles/SingleProjectPage.css}" rel="stylesheet">
+</head>
+<body>
+	<div class="left-bar"></div>
+	<div class="right-bar"></div>
+	<h1 th:text="${project.projectName}"></h1>
+	<a th:href="${project.link}" th:text="GitHub-Link"></a>
+	<p th:text="${project.description}"></p>
+	<form action="./projectPage">
+		<input type="submit" value="Back"><br><br>
+	</form>
+</body>
+</html>

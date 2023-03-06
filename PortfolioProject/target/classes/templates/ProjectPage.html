@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>My Projects</title>
+	<link th:href="@{/styles/ProjectPage.css}" rel="stylesheet">
+</head>
+<body>
+	<div class="left-bar"></div>
+	<div class="right-bar"></div>
+	<h1>My Projects</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Project Name</th>
+				<th>GitHub Link</th>
+				<th>Date</th>
+				<th>Latest Version</th>
+				<th>Learn More</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="project : ${projects}">
+				<td th:text="${project.projectName}"></td>
+				<td>
+					<a th:href="${project.link}" th:text="Link"></a>
+				</td>
+				<td th:text="${project.date}"></td>
+				<td th:text="${project.version}"></td>
+				<td>
+					<a th:href="@{./singleProjectPage(projectId=${project.projectId})}">Click Me</a>
+				</td>
+				
+			</tr>
+		</tbody>
+	</table>
+	<form action="./">
+		<input type="submit" value="Back"><br><br>
+	</form>
+</body>
+</html>

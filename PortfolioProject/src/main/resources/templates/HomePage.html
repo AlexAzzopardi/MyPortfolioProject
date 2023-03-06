@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Portfolio Home Page</title>
+	<link th:href="@{/styles/HomePage.css}" rel="stylesheet">
+</head>
+<body>
+
+	<div class="left-bar"></div>
+	<div class="right-bar"></div>
+	<h1>Alex's Project Portfolio</h1>
+	<img th:src="@{/images/ProfilePicture.png}" th:alt="@{Picture Of Me}" width="256" height="256">
+	<p>Welcome to my portfolio page. Here I have added links to a few of the projects I have completed over the past few years. I have also included an about me section giving an overview of my programming journey so far! Currently the projects in this portfolio are both Java Springboot web applications I worked on during my time at Wiley Edge Academy and gives an overview of my programming abilities and some of the technologies which I have used.</p>
+	<a href="./profilePage">About Me</a>
+	<a href="./projectPage">My Projects</a><br><br>
+	
+</body>
+</html>
